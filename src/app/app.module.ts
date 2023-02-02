@@ -24,6 +24,6 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'ngbd-accordion-static',
   standalone: true,
   imports: [NgbAccordionModule],
-  templateUrl: './accordion-static.html',
+  templateUrl: './app.component.html',
 })
 export class NgbdAccordionStatic {}
