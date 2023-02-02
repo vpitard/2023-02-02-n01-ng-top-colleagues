@@ -3,8 +3,8 @@ name: Deploy To GitHub Pages
 
 on:
   push:
-  branches:
-    - 'branche-de-bg'
+    branches:
+      - 'branche-de-bg'
 
 jobs:
   build:
