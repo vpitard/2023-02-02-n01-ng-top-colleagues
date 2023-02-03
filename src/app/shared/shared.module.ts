@@ -2,18 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LikeHateComponent } from '../shared/components/like-hate/like-hate.component';
 import { ColleagueComponent } from '../shared/components/colleague/colleague.component';
+import { ColleagueListComponent } from '../shared/components/colleague-list/colleague-list.component';
 
 
 
 @NgModule({
   declarations: [
     LikeHateComponent,
-    ColleagueComponent
+    ColleagueComponent,
+    ColleagueListComponent
   ],
-  exports: [
-    LikeHateComponent,
-    ColleagueComponent
-  ],
+    exports: [
+        LikeHateComponent,
+        ColleagueComponent,
+        ColleagueListComponent
+    ],
   imports: [
     CommonModule
   ]
