@@ -10,12 +10,12 @@
 </div>
 <div class="row">
   <div class="col d-flex justify-content-center">
-    <p> {{colleague.score}}</p>
+    <p> {{scoreToString()}}</p>
   </div>
 </div>
 <div class="row">
   <div class="col d-flex justify-content-center">
-    <tc-like-hate></tc-like-hate>
+    <tc-like-hate (eventLikeHate)="likeOrHate($event)" [btnLikeDisable]="moreThan1000" [btnHateDisable]="lessThan1000"></tc-like-hate>
   </div>
 </div>
 
