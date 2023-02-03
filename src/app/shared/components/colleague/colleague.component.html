@@ -5,12 +5,12 @@
 </div>
 <div class="row">
   <div class="col d-flex justify-content-center">
-    <p> {{colleague.pseudo}}</p>
+    <p> {{colleague.pseudo | uppercase}}</p>
   </div>
 </div>
 <div class="row">
   <div class="col d-flex justify-content-center">
-    <p> {{scoreToString()}}</p>
+    <p> {{colleague.score | score}}</p>
   </div>
 </div>
 <div class="row">

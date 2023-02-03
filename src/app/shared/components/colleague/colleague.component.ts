@@ -44,12 +44,4 @@ export class ColleagueComponent {
       this.moreThan1000 = false;
     }
   }
-  scoreToString(): string{
-    if(this.colleague.score <= 0){
-      return this.colleague.score.toString();
-    }
-    else {
-      return "+" + this.colleague.score;
-    }
-  }
 }
