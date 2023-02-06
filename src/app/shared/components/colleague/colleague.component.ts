@@ -1,6 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
 import {Colleague} from "../../../models/colleague";
 import {LikeHate} from "../../../models/like-hate";
+import {Vote} from "../../../models/vote";
+import {VoteService} from "../../../providers/vote.service";
 
 @Component({
   selector: 'tc-colleague',
@@ -14,6 +16,10 @@ export class ColleagueComponent {
     score: 100,
     photo: "https://randomuser.me/api/portraits/men/70.jpg"
   };
+
+  constructor(private voteService: VoteService) {
+  }
+
   boundary = 1000;
 
   moreThan1000 = false;
@@ -28,6 +34,13 @@ export class ColleagueComponent {
       this.colleague.score-=100;
       this.checkBoundaries();
     }
+
+    let vote = {
+      colleague: this.colleague,
+      vote: likeHate
+    }
+
+    this.voteService.add(vote)
   }
 
   checkBoundaries(){
