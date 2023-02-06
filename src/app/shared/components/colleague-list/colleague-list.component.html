@@ -1,5 +1,5 @@
-<div class="row m-4 align-content-center">
-  <div *ngFor="let colleague of colleagues, let i = index" class="col-lg-3 col-md-3 border m-1 shadow-sm p-3 mb-5 bg-white rounded">
+<div class="row m-4">
+  <div *ngFor="let colleague of colleagues, let i = index" class="col border m-1 shadow-sm p-3 mb-5 bg-white rounded">
     <tc-colleague [colleague]="colleague" ></tc-colleague>
   </div>
 </div>
