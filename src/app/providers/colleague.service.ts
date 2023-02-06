@@ -1,46 +1,28 @@
 import { Injectable } from '@angular/core';
 import {Colleague} from "../models/colleague";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ColleagueService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   list(): Colleague[] {
-    return [
-      {
-        pseudo: "Jean",
-        score: 100,
-        photo: "https://randomuser.me/api/portraits/men/70.jpg"
-      },
-      {
-        pseudo: "Beatrice",
-        score: -500,
-        photo: "https://randomuser.me/api/portraits/women/57.jpg"
-      },
-      {
-        pseudo: "Anne",
-        score: 600,
-        photo: "https://randomuser.me/api/portraits/women/80.jpg"
-      },
-      {
-        pseudo: "Jean",
-        score: 100,
-        photo: "https://randomuser.me/api/portraits/men/70.jpg"
-      },
-      {
-        pseudo: "Beatrice",
-        score: -500,
-        photo: "https://randomuser.me/api/portraits/women/57.jpg"
-      },
-      {
-        pseudo: "Anne",
-        score: 600,
-        photo: "https://randomuser.me/api/portraits/women/80.jpg"
-      }
-    ];
+    let colleaguesList: Colleague[] = [];
+
+    this.http.get<Colleague[]>("https://dev.cleverapps.io/api/v2/colleagues")
+      .subscribe({
+        next: (colleagues: Colleague[]) => {
+          colleagues.forEach(colleague => colleaguesList.push(colleague))
+        },
+        error:err => {
+          console.log(err);
+        }
+      });
+
+    return colleaguesList;
   }
 
 }
