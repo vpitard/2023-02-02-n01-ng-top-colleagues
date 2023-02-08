@@ -7,7 +7,8 @@ import { ScorePipe } from '../shared/pipes/score.pipe';
 import { VotingHistoryComponent } from '../shared/components/voting-history/voting-history.component';
 import { CounterComponent } from '../shared/components/counter/counter.component';
 import { CreateColleagueFormsComponent } from './components/create-colleague-forms/create-colleague-forms.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { CreateColleagueReactiveFormsComponent } from './components/create-colleague-reactive-forms/create-colleague-reactive-forms.component';
 
 
 
@@ -19,19 +20,22 @@ import {FormsModule} from "@angular/forms";
     ScorePipe,
     VotingHistoryComponent,
     CounterComponent,
-    CreateColleagueFormsComponent
+    CreateColleagueFormsComponent,
+    CreateColleagueReactiveFormsComponent
   ],
-    exports: [
-        LikeHateComponent,
-        ColleagueComponent,
-        ColleagueListComponent,
-        VotingHistoryComponent,
-        CounterComponent,
-        CreateColleagueFormsComponent
-    ],
+  exports: [
+    LikeHateComponent,
+    ColleagueComponent,
+    ColleagueListComponent,
+    VotingHistoryComponent,
+    CounterComponent,
+    CreateColleagueFormsComponent,
+    CreateColleagueReactiveFormsComponent
+  ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

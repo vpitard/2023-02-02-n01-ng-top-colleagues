@@ -36,6 +36,6 @@ export class CreateColleagueFormsComponent {
     }
 
     this.colleagueService;
-    console.log(this.colleagueModel);
+    console.log(colleagueComplete);
   }
 }

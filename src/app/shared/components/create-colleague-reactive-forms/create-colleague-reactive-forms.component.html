@@ -1,0 +1,46 @@
+<h1>Formulaire piloté par le code</h1>
+
+<form [formGroup]="colleagueForm">
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Pseudo</label>
+    </div>
+    <div>
+      <input formControlName="pseudo" name="pseudo">
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Nom</label>
+    </div>
+    <div>
+      <input  formControlName="last" name="last">
+      <p *ngIf="last?.dirty && last?.invalid" class="text-danger">
+        Le champ prénom est invalide.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Prénom</label>
+    </div>
+    <div>
+      <input formControlName="first" name="first">
+      <p *ngIf="first?.dirty && first?.invalid" class="text-danger">
+        Le champ prénom est invalide.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>URL de la photo</label>
+    </div>
+    <div>
+      <input formControlName="photo" name="photo">
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <button (click)="submit()" type="submit">Ajouter</button>
+    </div>
+  </div>
