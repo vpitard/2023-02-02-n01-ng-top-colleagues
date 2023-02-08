@@ -1,0 +1,7 @@
+POST https://dev.cleverapps.io/api/v2/votes
+Content-Type: application/json
+
+{
+  "like_hate" : "LIKE",
+  "pseudo": "vi01"
+}

@@ -1,6 +1,6 @@
-<h3>Historique</h3>
+<h3>Historique</h3> <tc-counter></tc-counter>
 <div class="m-4 align-content-center">
-  <div *ngFor="let vote of votes.reverse()" class="m-2">
+  <div *ngFor="let vote of votes" class="m-2">
 
     <div *ngIf="vote.vote=='LIKE'" class="border border-success bg-success" style="--bs-bg-opacity: .5;">
       <div class="col-4">

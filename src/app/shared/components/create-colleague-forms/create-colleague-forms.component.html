@@ -1,0 +1,48 @@
+<h1>Formulaire piloté par le template</h1>
+
+<form (ngSubmit)="submit()" #formColleague="ngForm">
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Pseudo</label>
+    </div>
+    <div>
+      <input required [(ngModel)]="colleagueModel.pseudo" name="pseudo">
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Nom</label>
+    </div>
+    <div>
+      <input required minlength="2" [(ngModel)]="colleagueModel.last" #last="ngModel" name="last">
+      <p *ngIf="last.dirty && last.invalid" class="text-danger">
+        Le champ nom est invalide.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>Prénom</label>
+    </div>
+    <div>
+      <input required minlength="2" [(ngModel)]="colleagueModel.first" #first="ngModel" name="first">
+      <p *ngIf="first.dirty && first.invalid" class="text-danger">
+        Le champ prénom est invalide.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <label>URL de la photo</label>
+    </div>
+    <div>
+      <input required [(ngModel)]="colleagueModel.photo" name="photo">
+    </div>
+  </div>
+  <div class="row mt-2 ms-2">
+    <div>
+      <button [disabled]="formColleague.invalid" type="submit">Ajouter</button>
+    </div>
+  </div>
+
+</form>
