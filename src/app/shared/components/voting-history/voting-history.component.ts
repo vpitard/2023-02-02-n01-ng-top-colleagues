@@ -10,8 +10,10 @@ import {Vote} from "../../../models/vote";
 export class VotingHistoryComponent {
 
   constructor(private voteService: VoteService) {
+    this.voteService.list().subscribe(voteApis => {
+      voteApis.forEach( voteApi => this.votes.push(voteService.voteapiToVote(voteApi)))
+    });
   }
 
-  votes: Vote[] = this.voteService.list();
-
+  votes: Vote[] = [];
 }

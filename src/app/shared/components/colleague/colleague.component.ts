@@ -37,7 +37,8 @@ export class ColleagueComponent {
 
     let vote = {
       colleague: this.colleague,
-      vote: likeHate
+      vote: likeHate,
+      score: this.colleague.score
     }
 
     this.voteService.add(vote)

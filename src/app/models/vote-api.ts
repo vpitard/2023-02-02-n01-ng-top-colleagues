@@ -1,11 +1,10 @@
 import {Colleague} from "./colleague";
 import {LikeHate} from "./like-hate";
 
-export interface Vote {
-
+export interface VoteAPI {
   colleague: Colleague;
-
-  vote: LikeHate;
-
+  like_hate: LikeHate;
   score: number;
+  created_date: string;
+
 }
