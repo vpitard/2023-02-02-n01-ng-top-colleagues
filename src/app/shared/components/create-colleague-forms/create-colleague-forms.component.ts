@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Colleague} from "../../../models/colleague";
-import {ColleagueCompleteAPI} from "../../../models/colleague-complete-api";
+import {ColleagueComplete} from "../../../models/colleague-complete";
 import {ColleagueService} from "../../../providers/colleague.service";
 
 class ColleagueModel {
@@ -9,11 +9,14 @@ class ColleagueModel {
   first: string;
   photo: string;
 
+  score: number;
+
   constructor() {
     this.pseudo = "";
     this.last = "";
     this.first = "";
     this.photo = "";
+    this.score = 0;
   }
 }
 @Component({
@@ -28,11 +31,12 @@ export class CreateColleagueFormsComponent {
   colleagueModel = new ColleagueModel();
 
   submit() {
-    let colleagueComplete: ColleagueCompleteAPI = {
+    let colleagueComplete: ColleagueComplete = {
       pseudo: this.colleagueModel.pseudo,
       last: this.colleagueModel.last,
       first: this.colleagueModel.first,
-      photo: this.colleagueModel.photo
+      photo: this.colleagueModel.photo,
+      score: this.colleagueModel.score
     }
 
     this.colleagueService;

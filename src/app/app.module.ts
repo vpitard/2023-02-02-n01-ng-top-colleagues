@@ -9,20 +9,22 @@ import {CreateColleagueModule} from "./pages/create-colleague/create-colleague.m
 import { AppRoutingModule } from './app-routing.module';
 import {CreateColleagueReactiveModule} from "./pages/create-colleague-reactive/create-colleague-reactive.module";
 import {ColleaguesModule} from "./pages/colleagues/colleagues.module";
+import {ColleagueDetailModule} from "./pages/colleague-detail/colleague-detail.module";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
     imports: [
-        BrowserModule,
-        NgbModule,
-        SharedModule,
-        HttpClientModule,
-        CreateColleagueModule,
-        AppRoutingModule,
-        CreateColleagueReactiveModule,
-        ColleaguesModule
+      BrowserModule,
+      NgbModule,
+      SharedModule,
+      HttpClientModule,
+      CreateColleagueModule,
+      AppRoutingModule,
+      CreateColleagueReactiveModule,
+      ColleaguesModule,
+      ColleagueDetailModule
     ],
   providers: [],
   bootstrap: [AppComponent]

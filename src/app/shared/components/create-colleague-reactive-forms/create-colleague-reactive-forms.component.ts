@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ColleagueCompleteAPI} from "../../../models/colleague-complete-api";
 
 @Component({
   selector: 'tc-create-colleague-reactive-forms',
