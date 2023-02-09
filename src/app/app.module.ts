@@ -6,6 +6,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SharedModule} from "./shared/shared.module";
 import {HttpClientModule} from "@angular/common/http";
 import {CreateColleagueModule} from "./pages/create-colleague/create-colleague.module";
+import { AppRoutingModule } from './app-routing.module';
+import {CreateColleagueReactiveModule} from "./pages/create-colleague-reactive/create-colleague-reactive.module";
+import {ColleaguesModule} from "./pages/colleagues/colleagues.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import {CreateColleagueModule} from "./pages/create-colleague/create-colleague.m
         NgbModule,
         SharedModule,
         HttpClientModule,
-        CreateColleagueModule
+        CreateColleagueModule,
+        AppRoutingModule,
+        CreateColleagueReactiveModule,
+        ColleaguesModule
     ],
   providers: [],
   bootstrap: [AppComponent]
