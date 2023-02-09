@@ -4,7 +4,7 @@
 
     <div *ngIf="vote.vote=='LIKE'" class="border border-success bg-success" style="--bs-bg-opacity: .5;">
       <div class="col-4">
-        <img src="{{vote.colleague.photo}}">
+        <img src="{{vote.colleague.photo}}" class="img-fluid">
       </div>
       <div class="col-8">
         {{vote.colleague.pseudo}} est aimé(e), son score est désormais de {{vote.score}}
@@ -12,7 +12,7 @@
     </div>
     <div *ngIf="vote.vote=='HATE'" class="border border-danger bg-danger" style="--bs-bg-opacity: .5;">
       <div class="col-4">
-        <img src="{{vote.colleague.photo}}">
+        <img src="{{vote.colleague.photo}}" class="img-fluid">
       </div>
       <div class="col-8">
         {{vote.colleague.pseudo}} est détesté(e), son score est désormais de {{vote.score}}

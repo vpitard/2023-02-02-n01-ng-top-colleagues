@@ -1,13 +1,19 @@
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/colleagues">Collègues</a>
-    </li>
-    <li>
-      <a routerLink="/form-template">Formulaire piloté par template</a>
-    </li>
-    <li>
-      <a routerLink="/form-reactive">Formulaire piloté par le code</a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand ms-3" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/colleagues">Collègues</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/form-template">Formulaire piloté par template</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/form-reactive">Formulaire piloté par le code</a>
+      </li>
+    </ul>
+  </div>
 </nav>
